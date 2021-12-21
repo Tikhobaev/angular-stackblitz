@@ -1,0 +1,13 @@
+<button tuiButton type="button" size="m" (click)="showDialog()">Show</button>
+<recipe-list
+  (recipeOpened)="openRecipe($event)"
+  [recipes]="recipeList"
+></recipe-list>
+<recipe-description
+  (ingredientAdded)="addIngredientToCart($event)"
+  [recipe]="currentRecipe"
+></recipe-description>
+<!-- <shopping-cart
+  [recipes]="cartRecipeList"
+  (recipeRemoved)="removeRecipe($event)"
+></shopping-cart> -->
